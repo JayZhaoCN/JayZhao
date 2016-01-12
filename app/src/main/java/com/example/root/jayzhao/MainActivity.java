@@ -136,6 +136,9 @@ public class MainActivity extends AppCompatActivity {
         str02.add("心率");
         str02.add("分享");
 
+
+        
+
         layout01 = (LinearLayout)findViewById(R.id.linearlayout02);
         lp = layout01.getLayoutParams();
         lp.height = 3000;
