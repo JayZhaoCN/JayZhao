@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FF7256"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+            <LinearLayout
+                android:id="@+id/linearlayour01"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                >
+                <ImageButton
+                    android:id="@+id/imagebutton01"
+                    android:layout_height="38dp"
+                    android:layout_width="38dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_indicator_prev_2"
+                    android:layout_gravity="center_vertical|left"
+                    android:gravity="left"
+                    />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="心率"
+                    >
+                </TextView>
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"></LinearLayout>
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/iamgeView01"
+        android:scaleType="centerInside"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/heart_rate_miband"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"></LinearLayout>
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/textView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请绑定小米手环光感版"
+        android:textColor="@color/blackDrak"
+        />
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/textView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用小米手环光感版，检测心率，科学运动"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"></LinearLayout>
+
+    <Button
+        android:alpha="50"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我还没有手环"
+        />
+
+
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.root.jayzhao.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/myColor"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                >
+                <LinearLayout
+                    android:id="@+id/linearlayour01"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    >
+                    <ImageButton
+
+                        android:layout_weight="1"
+                        android:id="@+id/imagebutton01"
+                        android:layout_height="48dp"
+                        android:layout_width="48dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/progress_icon"
+                        android:layout_gravity="center_vertical|left"
+                         />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="150dp"
+                        android:text="@string/title"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="5"
+                        >
+                    </TextView>
+                    <ImageButton
+                        android:layout_weight="2"
+                        android:id="@+id/imagebutton02"
+                        android:src="@drawable/add_new_member"
+                        android:layout_height="48dp"
+                        android:layout_width="48dp"
+                        android:scaleType="centerInside"
+                        android:layout_gravity="center_vertical|right"
+                        />
+                </LinearLayout>
+            </android.support.v7.widget.Toolbar>
+
+
+
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <include layout="@layout/content_main" />
+
+
+</android.support.design.widget.CoordinatorLayout>

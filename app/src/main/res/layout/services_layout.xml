@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/cyan"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+
+            <LinearLayout
+                android:id="@+id/linearlayour01"
+                android:orientation="horizontal"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                >
+                <ImageButton
+                    android:id="@+id/imagebutton01"
+                    android:layout_height="38dp"
+                    android:layout_width="38dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_indicator_prev_2"
+                    android:layout_gravity="center_vertical|left"
+                    android:gravity="left"
+                    />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="服务"
+                    >
+                </TextView>
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:layout_height="20dp"
+        android:layout_width="match_parent"
+        />
+
+
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_gravity="center"
+        android:layout_height="45dp">
+
+
+        <TextView
+            android:gravity="left|center_vertical"
+            android:textColor="@color/blackDrak"
+            android:text="微信接入"
+            android:layout_gravity="center_vertical"
+            android:layout_width="300dp"
+            android:layout_height="40dp" />
+
+
+        <ImageButton
+            android:id="@+id/imagebutton02"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_gravity="center"
+        android:layout_height="45dp">
+        <TextView
+            android:gravity="left|center_vertical"
+            android:textColor="@color/blackDrak"
+            android:text="绑定手机QQ"
+            android:layout_gravity="center_vertical"
+            android:layout_width="300dp"
+            android:layout_height="40dp" />
+
+
+        <ImageButton
+            android:id="@+id/imagebutton03"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_gravity="center"
+        android:layout_height="45dp">
+        <TextView
+            android:textColor="@color/blackDrak"
+            android:gravity="left|center_vertical"
+            android:text="绑定微博"
+            android:layout_gravity="center_vertical"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/imagebutton04"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></LinearLayout>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_gravity="center"
+        android:layout_height="45dp">
+        <TextView
+            android:textColor="@color/blackDrak"
+            android:gravity="left|center_vertical"
+            android:text="安全保障服务"
+            android:layout_gravity="center_vertical"
+            android:layout_width="300dp"
+            android:layout_height="40dp" />
+
+        <ImageButton
+            android:id="@+id/imagebutton05"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></LinearLayout>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_gravity="center"
+        android:layout_height="45dp">
+        <TextView
+            android:textColor="@color/blackDrak"
+            android:gravity="left|center_vertical"
+            android:text="步步保-运动变现计划"
+            android:layout_gravity="center_vertical"
+            android:layout_width="300dp"
+            android:layout_height="40dp" />
+
+        <ImageButton
+            android:id="@+id/imagebutton06"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_gravity="center"
+        android:layout_height="45dp">
+        <TextView
+            android:textColor="@color/blackDrak"
+            android:gravity="left|center_vertical"
+            android:text="米动训练中心"
+            android:layout_gravity="center_vertical"
+            android:layout_width="300dp"
+            android:layout_height="40dp" />
+
+        <ImageButton
+            android:id="@+id/imagebutton07"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_gravity="center"
+        android:layout_height="45dp">
+        <TextView
+            android:textColor="@color/blackDrak"
+            android:gravity="left|center_vertical"
+            android:text="我的2015运动成绩单"
+            android:layout_gravity="center_vertical"
+            android:layout_width="300dp"
+            android:layout_height="40dp" />
+        <ImageButton
+            android:id="@+id/imagebutton08"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_gravity="center"
+        android:layout_height="45dp">
+        <TextView
+            android:textColor="@color/blackDrak"
+            android:gravity="left|center_vertical"
+            android:text="米动365全民行走计划"
+            android:layout_gravity="center_vertical"
+            android:layout_width="300dp"
+            android:layout_height="40dp" />
+
+        <ImageButton
+            android:id="@+id/imagebutton09"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+
+
+
+
+
+
+</LinearLayout>

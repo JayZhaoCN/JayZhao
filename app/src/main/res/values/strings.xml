@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JayZhao</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_edit">edit</string>
+    <string name="action_share">share</string>
+    <string name="title">今日活动</string>
+</resources>
