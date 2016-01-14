@@ -2,7 +2,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content">
+    android:layout_width="wrap_content"
+    android:clickable="true"
+    android:background="@drawable/list_press">
 
     <ImageView
         android:id="@+id/imageView01"
@@ -21,14 +23,15 @@
         android:gravity="center_vertical"
 
         ></TextView>
-    <ImageView
-        android:id="@+id/imageView02"
-        android:layout_height="26dp"
-        android:layout_width="26dp"
+    <ImageButton
+        android:id="@+id/imageButton02"
+        android:layout_height="32dp"
+        android:layout_width="32dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/running_right"
+        android:layout_gravity="center_vertical|left"
+        android:gravity="left"
+        />
 
-        android:scaleType="fitStart"
-        android:layout_gravity="right|center_vertical"
-        android:src="@drawable/btn_dynamic_detail_next_normal"
-        ></ImageView>
 
 </LinearLayout>

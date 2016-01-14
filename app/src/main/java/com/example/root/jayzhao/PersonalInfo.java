@@ -3,8 +3,11 @@ package com.example.root.jayzhao;
 import android.app.Activity;
 import android.content.Context;
 import android.media.Image;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -18,7 +21,8 @@ public class PersonalInfo extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         this.setContentView(R.layout.personal_info_layout);
 
-        ImageButton imageButton01 = (ImageButton) findViewById(R.id.imagebutton01);
+
+        final ImageButton imageButton01 = (ImageButton) findViewById(R.id.imagebutton01);
         imageButton01.getBackground().setAlpha(0);
         ImageButton imageButton02 = (ImageButton) findViewById(R.id.imagebutton02);
         imageButton02.getBackground().setAlpha(0);
@@ -45,7 +49,22 @@ public class PersonalInfo extends Activity {
             }
         });
 
+        imageButton01.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        imageButton01.setImageDrawable(getResources().getDrawable(R.drawable.ic_indicator_prev_2));
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        imageButton01.setImageDrawable(getResources().getDrawable(R.drawable.ic_indicator_prev));
+                        break;
+                }
 
+
+                return false;
+            }
+        });
 
 
 

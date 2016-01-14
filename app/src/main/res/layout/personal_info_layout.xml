@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <android.support.design.widget.AppBarLayout
@@ -13,7 +14,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/cyan"
+            android:background="@color/myColor"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             >
 
@@ -28,7 +29,7 @@
                     android:layout_height="38dp"
                     android:layout_width="38dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_indicator_prev_2"
+                    android:src="@drawable/ic_indicator_prev"
                     android:layout_gravity="center_vertical|left"
                     android:gravity="left"
                     />
@@ -53,6 +54,8 @@
         />
 
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -130,33 +133,37 @@
         android:layout_height="0.5dp"
         android:background="@color/black"/>
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:layout_gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="45dp">
 
 
         <TextView
-            android:layout_weight="2"
-            android:gravity="center"
+            android:textColor="#000000"
+            android:gravity="left|center_vertical"
             android:text="家庭成员"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="40dp" />
         <TextView
+
             android:layout_weight="2"
-            android:gravity="center|left"
-            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"
+            android:layout_width="160dp"
             android:layout_height="wrap_content" />
 
         <ImageButton
-            android:layout_weight="1"
             android:id="@+id/imagebutton04"
             android:layout_height="30dp"
             android:layout_width="30dp"
             android:scaleType="centerInside"
             android:src="@drawable/running_right"
             android:layout_gravity="center_vertical"
-            android:gravity="left"
+            android:gravity="right"
             />
     </LinearLayout>
 
@@ -167,12 +174,15 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:layout_gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="45dp">
         <TextView
-            android:layout_weight="2"
-            android:gravity="center"
+        android:textColor="#000000"
+            android:gravity="center_vertical|left"
             android:text="实验室"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
@@ -180,18 +190,17 @@
         <TextView
             android:layout_weight="2"
             android:gravity="center|left"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content" />
 
         <ImageButton
-            android:layout_weight="1"
             android:id="@+id/imagebutton05"
             android:layout_height="30dp"
             android:layout_width="30dp"
             android:scaleType="centerInside"
             android:src="@drawable/running_right"
             android:layout_gravity="center_vertical"
-            android:gravity="left"
+            android:gravity="right"
             />
     </LinearLayout>
 
@@ -202,31 +211,35 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:layout_gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="45dp">
         <TextView
-            android:layout_weight="2"
+            android:textColor="#000000"
             android:gravity="center"
             android:text="运动目标"
-            android:layout_gravity="center_vertical"
+            android:layout_gravity="center_vertical|left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            android:text="8000步/天"
             android:layout_weight="2"
-            android:gravity="center|left"
-            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"
+            android:layout_width="160dp"
             android:layout_height="wrap_content" />
 
         <ImageButton
-            android:layout_weight="1"
             android:id="@+id/imagebutton06"
             android:layout_height="30dp"
             android:layout_width="30dp"
             android:scaleType="centerInside"
             android:src="@drawable/running_right"
             android:layout_gravity="center_vertical"
-            android:gravity="left"
+            android:gravity="right"
             />
     </LinearLayout>
 
@@ -237,31 +250,35 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:layout_gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="45dp">
         <TextView
-            android:layout_weight="2"
+            android:textColor="#000000"
             android:gravity="center"
             android:text="体重目标"
-            android:layout_gravity="center_vertical"
+            android:layout_gravity="center_vertical|left"
             android:layout_width="wrap_content"
             android:layout_height="40dp" />
         <TextView
+            android:text="64.0公斤"
             android:layout_weight="2"
-            android:gravity="center|left"
-            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"
+            android:layout_width="160dp"
             android:layout_height="wrap_content" />
 
         <ImageButton
-            android:layout_weight="1"
             android:id="@+id/imagebutton07"
             android:layout_height="30dp"
             android:layout_width="30dp"
             android:scaleType="centerInside"
             android:src="@drawable/running_right"
             android:layout_gravity="center_vertical"
-            android:gravity="left"
+            android:gravity="right"
             />
     </LinearLayout>
 
@@ -272,12 +289,15 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:layout_gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="45dp">
         <TextView
-            android:layout_weight="2"
-            android:gravity="center"
+            android:textColor="#000000"
+            android:gravity="center_vertical|left"
             android:text="单位"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
@@ -285,18 +305,17 @@
         <TextView
             android:layout_weight="2"
             android:gravity="center|left"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content" />
 
         <ImageButton
-            android:layout_weight="1"
             android:id="@+id/imagebutton08"
             android:layout_height="30dp"
             android:layout_width="30dp"
             android:scaleType="centerInside"
             android:src="@drawable/running_right"
             android:layout_gravity="center_vertical"
-            android:gravity="left"
+            android:gravity="right"
             />
     </LinearLayout>
 
@@ -320,12 +339,15 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:layout_gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="45dp">
         <TextView
-            android:layout_weight="2"
-            android:gravity="center"
+            android:textColor="#000000"
+            android:gravity="center_vertical|left"
             android:text="关于"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
@@ -333,18 +355,17 @@
         <TextView
             android:layout_weight="2"
             android:gravity="center|left"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content" />
 
         <ImageButton
-            android:layout_weight="1"
             android:id="@+id/imagebutton09"
             android:layout_height="30dp"
             android:layout_width="30dp"
             android:scaleType="centerInside"
             android:src="@drawable/running_right"
             android:layout_gravity="center_vertical"
-            android:gravity="left"
+            android:gravity="right"
             />
     </LinearLayout>
 

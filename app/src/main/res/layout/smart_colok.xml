@@ -4,6 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,13 +15,11 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/cyan"
+            android:background="#1C86EE"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             >
-
             <LinearLayout
-                android:id="@+id/linearlayout01"
-                android:orientation="horizontal"
+                android:id="@+id/linearlayour01"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 >
@@ -34,23 +34,40 @@
                     />
 
                 <TextView
+                    android:layout_weight="7"
                     android:id="@+id/textView1"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="15sp"
+                    android:gravity="left|center_vertical"
                     android:layout_gravity="center_vertical"
-                    android:text="我的设备"
-                    />
+                    android:text="智能闹钟"
+                    >
+                </TextView>
+                <Button
+                    android:layout_weight="1"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@drawable/button"
+                    android:layout_width="30dp"
+                    android:layout_height="36dp"
+                    android:text="编辑"
+                    android:textColor="#555555"
+                    android:textSize="15sp"
+                     />
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
 
             </LinearLayout>
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
-
     <ListView
-        android:id="@+id/list01"
-        android:layout_height="match_parent"
+        android:id="@+id/listView01"
         android:layout_width="match_parent"
-        ></ListView>
+        android:layout_height="match_parent"></ListView>
+
+
 
 </LinearLayout>

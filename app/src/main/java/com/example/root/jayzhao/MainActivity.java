@@ -1,14 +1,11 @@
 package com.example.root.jayzhao;
 
-import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -20,19 +17,19 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AbsListView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
     ListView listView01 = null;
     boolean isUp = false;
     LinearLayout layout01 = null;
-    DialogFragment df = null;
     Toolbar toolbar = null;
+    MyDialogFragment df;
 
     public static List<String> str02 = new ArrayList<String>();
 
@@ -55,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
     MyHandler handler = new MyHandler();
 
     class MyHandler extends Handler {
-
         @Override
         public void handleMessage(Message msg) {
             lp.height = msg.what;
@@ -73,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
             this.end = end;
             this.flag = flag;
         }
-
         @Override
         public void run() {
             while(start != end) {
@@ -93,13 +88,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
@@ -110,13 +103,43 @@ public class MainActivity extends AppCompatActivity {
 
         imageButton02 = (ImageButton)findViewById(R.id.imagebutton02);
         imageButton02.getBackground().setAlpha(0);
+
         imageButton02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                df = new MyDialogFragment();
+                df = new MyDialogFragment(MainActivity.this);
                 df.setCancelable(true);
-                df.show(getSupportFragmentManager(), null);
+                df.show(getFragmentManager(), "");
+            }
+        });
 
+        imageButton02.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        imageButton02.setImageDrawable(getResources().getDrawable(R.drawable.btn_more_pressed));
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        imageButton02.setImageDrawable(getResources().getDrawable(R.drawable.btn_more_normal));
+                        break;
+                }
+                return false;
+            }
+        });
+
+        imageButton01.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        imageButton01.setImageDrawable(getResources().getDrawable(R.drawable.btn_statistic_pressed));
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        imageButton01.setImageDrawable(getResources().getDrawable(R.drawable.btn_statistic_normal));
+                        break;
+                }
+                return false;
             }
         });
 
@@ -135,9 +158,6 @@ public class MainActivity extends AppCompatActivity {
         str02.add("亲友");
         str02.add("心率");
         str02.add("分享");
-
-
-        
 
         layout01 = (LinearLayout)findViewById(R.id.linearlayout02);
         lp = layout01.getLayoutParams();
@@ -181,9 +201,7 @@ public class MainActivity extends AppCompatActivity {
                     case AbsListView.OnScrollListener.SCROLL_STATE_FLING:
                         Log.d("2", "fling");
                         if (!isUp) {
-
                             new Thread(new MyThread(3000, 500, 0)).start();
-
                         }
                         firstIndex = view.getFirstVisiblePosition();
                         break;
@@ -248,32 +266,39 @@ public class MainActivity extends AppCompatActivity {
                 LinearLayout linearLayout01 = (LinearLayout)findViewById(R.id.linearlayout02);
                 Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
                 TextView t = (TextView) findViewById(R.id.textView1);
-                switch (position)
-                {
+                switch (position) {
                     case 0:
-                        linearLayout01.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        linearLayout01.setBackgroundColor(getResources().getColor(R.color.myColor2));
+                        imageButton01.setImageDrawable(getResources().getDrawable(R.drawable.btn_statistic_normal));
                         t.setText("昨晚睡眠");
-                        toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        toolbar.setBackgroundColor(getResources().getColor(R.color.myColor2));
                         break;
                     case 1:
                         linearLayout01.setBackgroundColor(getResources().getColor(R.color.myColor));
+                        imageButton01.setImageDrawable(getResources().getDrawable(R.drawable.btn_statistic_normal));
                         t.setText("今日活动");
                         toolbar.setBackgroundColor(getResources().getColor(R.color.myColor));
                         break;
                     case 2:
-                        linearLayout01.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                        linearLayout01.setBackgroundColor(getResources().getColor(R.color.myColor1));
                         t.setText("未绑定体重秤");
-                        toolbar.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                        imageButton01.setImageDrawable(getResources().getDrawable(R.drawable.btn_statistic_weight_normal));
+                        toolbar.setBackgroundColor(getResources().getColor(R.color.myColor1));
                         break;
                 }
             }
-
             @Override
-            public void onPageScrollStateChanged(int state) {
-            }
+            public void onPageScrollStateChanged(int state) {}
         });
     }
 
+    @Override
+    protected void onPause() {
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.remove(df);
+        ft.commit();
+        super.onPause();
+    }
 
     class MyFragmentPagerAdapter extends FragmentPagerAdapter {
         public MyFragmentPagerAdapter(FragmentManager fm) {
@@ -297,7 +322,6 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
 
 
     class MyAdapter extends BaseAdapter {
@@ -324,6 +348,8 @@ public class MainActivity extends AppCompatActivity {
                 ImageView imageView01 = (ImageView) vg.findViewById(R.id.imageView01);
                 imageView01.setImageDrawable(getResources().getDrawable(R.drawable.game_banner_icon));
             }
+            ImageButton imageButton02 = (ImageButton) vg.findViewById(R.id.imageButton02);
+            imageButton02.getBackground().setAlpha(0);
 
             t1.setText(strs.get(position));
             return vg;

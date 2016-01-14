@@ -1,26 +1,50 @@
 package com.example.root.jayzhao;
 
-
-
-import android.app.Dialog;
+import android.app.ActionBar;
+import android.app.DialogFragment;
+import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
+import android.support.annotation.Nullable;
 import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
 
-
 public class MyDialogFragment extends DialogFragment {
+    Context c = null;
+    MyDialogFragment(Context c) {
+        this.c = c;
+    }
 
-    class MyAdapter extends BaseAdapter {
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        final WindowManager.LayoutParams layoutParams = getDialog().getWindow().getAttributes();
+        layoutParams.gravity = Gravity.TOP;
+        layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        getDialog().getWindow().setAttributes(layoutParams);
+    }
+
+    class MyAdapter1 extends BaseAdapter {
+
+        LayoutInflater lf = null;
+        MyAdapter1(LayoutInflater lf) {
+            this.lf = lf;
+        }
+
 
         @Override
         public int getCount() {
@@ -39,74 +63,96 @@ public class MyDialogFragment extends DialogFragment {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+
             final int index = position;
+            parent = (ViewGroup)lf.inflate(R.layout.list02, null);
+            TextView t = (TextView) parent.findViewById(R.id.textView01);
+            t.setText(MainActivity.str02.get(position));
 
-            ViewGroup vg = (ViewGroup) getLayoutInflater(null).inflate(R.layout.list02, null);
+            parent.setOnClickListener(new View.OnClickListener() {
+                Intent intent = new Intent();
 
-
-
-            vg.setOnClickListener(new View.OnClickListener() {
-                @Override
                 public void onClick(View v) {
-
-
-                    Intent intent = new Intent();
-                    intent.putExtra("index", index);
                     switch (index) {
                         case 0:
-                            intent.setClass(getContext(), MyDevice.class);
-                            getContext().startActivity(intent);
+                            intent.setClass(c, MyDevice.class);
+                            intent.putExtra("index", index);
+                            c.startActivity(intent);
+                            break;
+                        case 1:
+                            intent.setClass(c, SmartColok.class);
+                            intent.putExtra("index", index);
+                            c.startActivity(intent);
                             break;
                         case 2:
-                            intent.setClass(getContext(), PersonalInfo.class);
-                            getContext().startActivity(intent);
-
+                            intent.setClass(c, PersonalInfo.class);
+                            intent.putExtra("index", index);
+                            c.startActivity(intent);
                             break;
                         case 4:
-                            intent.setClass(getContext(), Services.class);
-                            getContext().startActivity(intent);
+                            intent.setClass(c, Services.class);
+                            intent.putExtra("index", index);
+                            c.startActivity(intent);
                             break;
                         case 6:
-                            intent.setClass(getContext(), Heartbeat.class);
-                            getContext().startActivity(intent);
+                            intent.setClass(c, Heartbeat.class);
+                            intent.putExtra("index", index);
+                            c.startActivity(intent);
                             break;
 
                     }
-
                 }
             });
 
-            TextView tv = (TextView) vg.findViewById(R.id.textView01);
-            tv.setText(MainActivity.str02.get(position));
-            return vg;
+            return parent;
         }
     }
 
 
 
-    @NonNull
+
+    @Nullable
     @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        container = (ViewGroup)inflater.inflate(R.layout.dialog_layout, null);
+        ListView list = (ListView)container.findViewById(R.id.listView01);
+        list.setAdapter(new MyAdapter1(inflater));
+        getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
+        final ImageButton image = (ImageButton) container.findViewById(R.id.imagebutton01);
+
+        image.getBackground().setAlpha(0);
 
 
-        Dialog dialog = new Dialog(getActivity(), R.style.AppTheme);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // must be called before set content
-        dialog.setContentView(R.layout.listview);
-        dialog.setCanceledOnTouchOutside(true);
-        ListView listView01 = (ListView)dialog.findViewById(R.id.listView01);
-        listView01.setAdapter(new MyAdapter());
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.remove(MyDialogFragment.this);
+                ft.commit();
+            }
+        });
+        image.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        image.setImageDrawable(getResources().getDrawable(R.drawable.menu_cancel_press));
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        image.setImageDrawable(getResources().getDrawable(R.drawable.menu_cancel_normal));
+                        break;
+                }
 
-        Window window = dialog.getWindow();
 
-        dialog.setCanceledOnTouchOutside(true);
+                return false;
+            }
+        });
 
-        //window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));  //设置dialog的透明度
-        WindowManager.LayoutParams wlp = window.getAttributes();
-        wlp.gravity = Gravity.TOP;
-        wlp.height = WindowManager.LayoutParams.WRAP_CONTENT;
-        wlp.width = WindowManager.LayoutParams.MATCH_PARENT;
-        window.setAttributes(wlp);
 
-        return dialog;
+
+
+
+
+        return container;
     }
 }

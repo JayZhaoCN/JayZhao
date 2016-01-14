@@ -10,7 +10,7 @@
     tools:showIn="@layout/activity_main">
 
     <LinearLayout
-        android:background="#ff9981"
+        android:background="@color/myColor"
         android:layout_weight="4"
         android:id="@+id/linearlayout02"
         android:layout_height="match_parent"

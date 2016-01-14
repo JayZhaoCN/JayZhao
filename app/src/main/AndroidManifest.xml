@@ -38,6 +38,22 @@
             android:label="Heartbeat"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+            android:name=".SmartColok"
+            android:label="SmartColok"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".EditClock"
+            android:label="EditClock"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".PickColokDate"
+            android:label="PickColokDate"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
     </application>
 
 </manifest>

@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -29,8 +30,25 @@ public class MyDevice extends Activity {
     List<Bitmap> imageList01 = new ArrayList<Bitmap>();
 
     public void addButton() {
-        ImageButton imageButton01 = (ImageButton)findViewById(R.id.imagebutton01);
+        final ImageButton imageButton01 = (ImageButton)findViewById(R.id.imagebutton01);
         imageButton01.getBackground().setAlpha(0);
+
+        imageButton01.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        imageButton01.setImageDrawable(getResources().getDrawable(R.drawable.ic_indicator_prev_2));
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        imageButton01.setImageDrawable(getResources().getDrawable(R.drawable.ic_indicator_prev));
+                        break;
+                }
+
+
+                return false;
+            }
+        });
 
         imageButton01.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,8 +80,6 @@ public class MyDevice extends Activity {
 
             TextView t = (TextView) vg.findViewById(R.id.text01);
             if(t == null) Log.d("TextView", "yes");
-            Log.d("strs", strs.size() + "");
-            Log.d("position", position + "");
             t.setText(strs.get(position));
             ImageView image = (ImageView) vg.findViewById(R.id.image01);
             image.setImageBitmap(imageList01.get(position));
@@ -94,7 +110,7 @@ public class MyDevice extends Activity {
 
         Resources res=getResources();
 
-        imageList01.add(BitmapFactory.decodeResource(res, R.drawable.shoes_lining_guangsu_color));
+        imageList01.add(BitmapFactory.decodeResource(res, R.drawable.shoes_lining_liejun_color));
         imageList01.add(BitmapFactory.decodeResource(res, R.drawable.shoes_lining_liejun_color));
         imageList01.add(BitmapFactory.decodeResource(res, R.drawable.shoes_lining_liejun_color));
 

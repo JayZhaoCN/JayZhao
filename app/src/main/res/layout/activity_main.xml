@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:clipToPadding="true"
     tools:context="com.example.root.jayzhao.MainActivity">
+
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -31,7 +33,7 @@
                         android:layout_height="48dp"
                         android:layout_width="48dp"
                         android:scaleType="centerInside"
-                        android:src="@drawable/progress_icon"
+                        android:src="@drawable/btn_statistic_normal"
                         android:layout_gravity="center_vertical|left"
                          />
 
@@ -43,12 +45,13 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:layout_weight="5"
+                        android:textColor="#ffffff"
                         >
                     </TextView>
                     <ImageButton
-                        android:layout_weight="2"
+                        android:layout_weight="1"
                         android:id="@+id/imagebutton02"
-                        android:src="@drawable/add_new_member"
+                        android:src="@drawable/btn_more_normal"
                         android:layout_height="48dp"
                         android:layout_width="48dp"
                         android:scaleType="centerInside"
@@ -56,10 +59,6 @@
                         />
                 </LinearLayout>
             </android.support.v7.widget.Toolbar>
-
-
-
-
 
 
     </android.support.design.widget.AppBarLayout>

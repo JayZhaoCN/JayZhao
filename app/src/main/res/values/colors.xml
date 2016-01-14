@@ -4,8 +4,12 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="backgroudColor">#ffffff</color>
-    <color name="myColor">#ff9981</color>
+    <color name="myColor">#5CACEE</color>
+    <color name="myColorDrak">#6495ED</color>
+    <color name="myColor1">#6B6B6B</color>
+    <color name="myColor2">#27408B</color>
     <color name="cyan">#309999</color>
     <color name="black">#dddddd</color>
     <color name="blackDrak">#000000</color>
+    <color name="white">#ffffff</color>
 </resources>

@@ -28,7 +28,7 @@
                     android:layout_height="38dp"
                     android:layout_width="38dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_indicator_prev_2"
+                    android:src="@drawable/ic_indicator_prev"
                     android:layout_gravity="center_vertical|left"
                     android:gravity="left"
                     />
@@ -69,6 +69,8 @@
         android:layout_height="0.5dp"
         android:background="@color/black"/>
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
         android:orientation="horizontal"
         android:layout_width="320dp"
         android:layout_gravity="center"
@@ -102,6 +104,8 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
         android:orientation="horizontal"
         android:layout_width="320dp"
         android:layout_gravity="center"
@@ -133,6 +137,8 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
         android:orientation="horizontal"
         android:layout_width="320dp"
         android:layout_gravity="center"
@@ -172,6 +178,8 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
         android:orientation="horizontal"
         android:layout_width="320dp"
         android:layout_gravity="center"
@@ -214,6 +222,8 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
         android:orientation="horizontal"
         android:layout_width="320dp"
         android:layout_gravity="center"
@@ -244,6 +254,8 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
         android:orientation="horizontal"
         android:layout_width="320dp"
         android:layout_gravity="center"
@@ -274,6 +286,8 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
         android:orientation="horizontal"
         android:layout_width="320dp"
         android:layout_gravity="center"
@@ -303,6 +317,8 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
         android:orientation="horizontal"
         android:layout_width="320dp"
         android:layout_gravity="center"

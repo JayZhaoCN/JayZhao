@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#1C86EE"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/linearlayout01"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                >
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="15sp"
+                    android:background="@drawable/button"
+                    android:id="@+id/button1"
+                    android:text="取消"
+                    android:layout_width="30dp"
+                    android:layout_height="36dp"/>
+
+
+                <TextView
+                    android:layout_weight="12"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/textView1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="闹钟设定"
+                    />
+
+                <Button
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="15sp"
+                    android:background="@drawable/button"
+                    android:id="@+id/button2"
+                    android:text="确定"
+                    android:layout_width="30dp"
+                    android:layout_height="36dp" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="320dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="闹钟"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"></LinearLayout>
+
+        <TextView
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"></LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:gravity="left|center_vertical"
+                android:textColor="@color/blackDrak"
+                android:text="智能唤醒"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="left|center_vertical"
+                android:textColor="#666666"
+                android:text="允许闹钟在目标唤醒时间之前30分钟内将我从浅度睡眠中唤醒，让我更轻松的起床"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"></LinearLayout>
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:background="@color/black"
+        android:layout_width="320dp"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_gravity="center"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:clickable="true"
+            android:background="@drawable/list_press"
+            android:id="@+id/timeSet"
+            android:layout_gravity="left|center_vertical"
+            android:orientation="vertical"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/blackDrak"
+                android:text="闹钟周期"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/time_text"
+                android:textColor="#666666"
+                android:text="周一至周五"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imagebutton02"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:background="@color/black"
+        android:layout_width="320dp"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="320dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="小提示"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"></LinearLayout>
+
+        <TextView
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"></LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="320dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="闹钟震动过程中，轻拍手环即可停止振动。手环检测到你已起床，即会停止振动。"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"></LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"></LinearLayout>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="设置闹钟时间"
+        />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TimePicker>
+
+
+
+
+</LinearLayout>

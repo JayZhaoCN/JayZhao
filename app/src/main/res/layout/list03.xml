@@ -2,21 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@drawable/list_press"
     android:minHeight="120dp"
+    android:clickable="true"
     >
     <ImageView
         android:layout_weight="4"
         android:id="@+id/image01"
-        android:layout_height="75dp"
-        android:layout_width="75dp"
+        android:layout_height="55dp"
+        android:layout_width="55dp"
         android:scaleType="centerInside"
         android:layout_gravity="center_vertical"
         ></ImageView>
 
     <TextView
         android:layout_weight="4"
-        android:layout_gravity="center_vertical"
+        android:layout_gravity="center_vertical|left"
         android:id="@+id/text01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

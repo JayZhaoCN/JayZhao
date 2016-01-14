@@ -2,6 +2,7 @@ package com.example.root.jayzhao;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -13,9 +14,10 @@ public class Services extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+
         this.setContentView(R.layout.services_layout);
 
-        ImageButton image01 = (ImageButton) findViewById(R.id.imagebutton01);
+        final ImageButton image01 = (ImageButton) findViewById(R.id.imagebutton01);
         image01.getBackground().setAlpha(0);
         image01.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +44,22 @@ public class Services extends Activity {
 
 
 
+        image01.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        image01.setImageDrawable(getResources().getDrawable(R.drawable.ic_indicator_prev_2));
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        image01.setImageDrawable(getResources().getDrawable(R.drawable.ic_indicator_prev));
+                        break;
+                }
+
+
+                return false;
+            }
+        });
 
 
         super.onCreate(savedInstanceState);
