@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_height="25dp">
+
+        <ImageButton
+            android:id="@+id/spaceImage"
+            android:layout_gravity="center_vertical"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:text="选择身高"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content">
+        <NumberPicker
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:id="@+id/picker01"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"></NumberPicker>
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="厘米"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_height="60dp">
+        <Button
+            android:layout_gravity="center_vertical"
+            android:id="@+id/cancel"
+            android:layout_weight="1"
+            android:text="取消"
+            android:background="@drawable/left_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+        <Button
+            android:layout_gravity="center_vertical"
+            android:id="@+id/confirm"
+            android:layout_weight="1"
+            android:text="确定"
+            android:background="@drawable/right_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

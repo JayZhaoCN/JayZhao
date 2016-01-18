@@ -2,6 +2,7 @@ package com.example.root.jayzhao;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -17,10 +19,16 @@ import android.widget.TextView;
  */
 public class PersonalInfo extends Activity {
 
+
+    public static int sportGoal = 8000;
+
+    TextView sport;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.setContentView(R.layout.personal_info_layout);
 
+        sport = (TextView) findViewById(R.id.sportText);
 
         final ImageButton imageButton01 = (ImageButton) findViewById(R.id.imagebutton01);
         imageButton01.getBackground().setAlpha(0);
@@ -66,10 +74,55 @@ public class PersonalInfo extends Activity {
             }
         });
 
+        LinearLayout linear01 = (LinearLayout) findViewById(R.id.linear01);
+        linear01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(PersonalInfo.this, Me.class);
+                PersonalInfo.this.startActivity(intent);
+            }
+        });
+        LinearLayout linear03 = (LinearLayout) findViewById(R.id.linear03);
+        linear03.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(PersonalInfo.this, Lab.class);
+                PersonalInfo.this.startActivity(intent);
+            }
+        });
+        LinearLayout linear06 = (LinearLayout) findViewById(R.id.linear06);
+        linear06.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(PersonalInfo.this, unit.class);
+                PersonalInfo.this.startActivity(intent);
+            }
+        });
+
+        LinearLayout linear04 = (LinearLayout) findViewById(R.id.linear04);
+        linear04.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(PersonalInfo.this, SportGoal.class);
+                PersonalInfo.this.startActivity(intent);
+            }
+        });
+
 
 
 
 
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void onResume() {
+
+        sport.setText((sportGoal*1000+2000) + "步/天");
+        super.onResume();
     }
 }

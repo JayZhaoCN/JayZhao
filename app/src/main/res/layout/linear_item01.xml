@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
+    android:background="@drawable/list_press"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:layout_width="320dp"
+    android:layout_height="45dp">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/text01"
+            android:textColor="#000000"
+            android:gravity="center_vertical|left"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/text02"
+            android:textColor="#000000"
+            android:gravity="center_vertical|right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/imagebutton01"
+            android:layout_height="38dp"
+            android:layout_width="38dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            />
+</LinearLayout>

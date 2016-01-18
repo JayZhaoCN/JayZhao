@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/myColor"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+            <LinearLayout
+                android:id="@+id/linearlayour01"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                >
+                <ImageButton
+                    android:id="@+id/back"
+                    android:layout_height="38dp"
+                    android:layout_width="38dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_indicator_prev"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="实验室"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:layout_weight="1"
+                    android:textColor="#000000"
+                    >
+                </TextView>
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"></LinearLayout>
+
+    <TextView
+        android:background="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="320dp"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_height="45dp">
+
+        <TextView
+            android:text="跳绳"
+            android:layout_weight="1"
+            android:id="@+id/text01"
+            android:textColor="#000000"
+            android:gravity="center_vertical|left"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/text02"
+            android:textColor="#000000"
+            android:gravity="center_vertical|right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/imagebutton01"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:background="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="320dp"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_height="45dp">
+
+        <TextView
+            android:text="仰卧起坐"
+            android:layout_weight="1"
+            android:id="@+id/text03"
+            android:textColor="#000000"
+            android:gravity="center_vertical|left"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/text04"
+            android:textColor="#000000"
+            android:gravity="center_vertical|right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/imagebutton02"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:background="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="320dp"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"></LinearLayout>
+
+    <TextView
+        android:background="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="320dp"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_height="45dp">
+
+        <TextView
+            android:text="蓝牙广播"
+            android:layout_weight="1"
+            android:id="@+id/text05"
+            android:textColor="#000000"
+            android:gravity="center_vertical|left"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/text06"
+            android:textColor="#000000"
+            android:gravity="center_vertical|right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/imagebutton03"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:background="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="320dp"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_height="45dp">
+
+        <TextView
+            android:text="踏步测试"
+            android:layout_weight="1"
+            android:id="@+id/text07"
+            android:textColor="#000000"
+            android:gravity="center_vertical|left"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/text08"
+            android:textColor="#000000"
+            android:gravity="center_vertical|right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/imagebutton04"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/running_right"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

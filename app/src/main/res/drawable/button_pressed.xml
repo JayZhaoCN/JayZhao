@@ -9,11 +9,10 @@
                 android:bottomLeftRadius="10dip"
                 android:bottomRightRadius="10dip" />
             <stroke
-                android:width="0.5dp"
+                android:width="0.2dp"
                 android:color="#222222"
                 android:dashWidth="1dp"
                 android:dashGap="0dp" />
-
         </shape>
     </item>
     <item android:top="1px" android:bottom="1px" android:left="1px" android:right="1px">

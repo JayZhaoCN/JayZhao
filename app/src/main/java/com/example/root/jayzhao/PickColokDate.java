@@ -47,7 +47,51 @@ public class PickColokDate extends Activity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(count == 7) {
+                    EditClock.time = "每天";
+                } else {
+                    EditClock.time = "";
+                    for(int i=0; i<7; i++) {
+                        if(isPicked.get(i)) {
+                            switch (i) {
+                                case 0:
+                                    EditClock.time += "周一 ";
+                                    break;
+                                case 1:
+                                    EditClock.time += "周二 ";
+                                    break;
+                                case 2:
+                                    EditClock.time += "周三 ";
+                                    break;
+                                case 3:
+                                    EditClock.time += "周四 ";
+                                    break;
+                                case 4:
+                                    EditClock.time += "周五 ";
+                                    break;
+                                case 5:
+                                    EditClock.time += "周六 ";
+                                    break;
+                                case 6:
+                                    EditClock.time += "周日 ";
+                                    break;
+                            }
+                        }
+                    }
+                }
+
+
                 PickColokDate.this.finish();
+            }
+        });
+
+        Button button1 = (Button) findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                PickColokDate.this.finish();
+
             }
         });
 

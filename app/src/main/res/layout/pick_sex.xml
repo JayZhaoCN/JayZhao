@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_height="25dp">
+
+        <ImageButton
+            android:id="@+id/spaceImage"
+            android:layout_gravity="center_vertical"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:text="选择性别"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:background="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="320dp"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/layout01"
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/image01"
+            android:scaleType="centerInside"
+            android:layout_gravity="center_vertical"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:text="男"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:background="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="320dp"
+        android:layout_height="1dp" />
+
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/layout02"
+        android:clickable="true"
+        android:background="@drawable/list_press"
+        android:orientation="horizontal"
+        android:layout_width="320dp"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:scaleType="centerInside"
+            android:id="@+id/image02"
+            android:layout_gravity="center_vertical"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:text="女"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>

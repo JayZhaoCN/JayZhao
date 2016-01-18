@@ -72,6 +72,8 @@
             />
 
         <LinearLayout
+            android:id="@+id/linear01"
+            android:clickable="true"
             android:layout_weight="2"
             android:layout_gravity="center"
             android:orientation="vertical"
@@ -174,6 +176,7 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:id="@+id/linear03"
         android:clickable="true"
         android:background="@drawable/list_press"
         android:layout_gravity="center_horizontal"
@@ -211,6 +214,7 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:id="@+id/linear04"
         android:clickable="true"
         android:background="@drawable/list_press"
         android:layout_gravity="center_horizontal"
@@ -225,6 +229,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            android:id="@+id/sportText"
             android:text="8000步/天"
             android:layout_weight="2"
             android:layout_gravity="center_vertical"
@@ -250,6 +255,7 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:id="@+id/linear05"
         android:clickable="true"
         android:background="@drawable/list_press"
         android:layout_gravity="center_horizontal"
@@ -289,6 +295,7 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:id="@+id/linear06"
         android:clickable="true"
         android:background="@drawable/list_press"
         android:layout_gravity="center_horizontal"
@@ -339,6 +346,7 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:id="@+id/linear07"
         android:clickable="true"
         android:background="@drawable/list_press"
         android:layout_gravity="center_horizontal"

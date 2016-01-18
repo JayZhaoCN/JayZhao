@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/myColor"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+            <LinearLayout
+                android:id="@+id/linearlayour01"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                >
+                <ImageButton
+                    android:id="@+id/back"
+                    android:layout_height="38dp"
+                    android:layout_width="38dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_indicator_prev"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="关于"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:layout_weight="1"
+                    android:textColor="#000000"
+                    >
+                </TextView>
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="4"
+            android:background="@color/myColor"
+            android:layout_width="match_parent"
+            android:layout_height="340dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"></LinearLayout>
+
+            <ImageButton
+                android:id="@+id/mi"
+                android:layout_height="180dp"
+                android:layout_width="180dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_about_logo"
+                android:layout_gravity="center_horizontal"
+                android:gravity="right"
+                />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:text="应用版本1.8.511"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <LinearLayout
+                android:id="@+id/linear01"
+                android:clickable="true"
+                android:background="@drawable/list_press"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="320dp"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/text01"
+                    android:text="意见反馈"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical|left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:text="男"
+                    android:layout_weight="1"
+                    android:id="@+id/text02"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical|right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <ImageButton
+                    android:id="@+id/image01"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/running_right"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:background="@color/black"
+                android:layout_width="320dp"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/linear02"
+                android:clickable="true"
+                android:background="@drawable/list_press"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="320dp"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/text03"
+                    android:text="访问官网"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical|left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:text="1993年7月"
+                    android:layout_weight="1"
+                    android:id="@+id/text04"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical|right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <ImageButton
+                    android:id="@+id/image02"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/running_right"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:background="@color/black"
+                android:layout_width="320dp"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/linear03"
+                android:clickable="true"
+                android:background="@drawable/list_press"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="320dp"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/text05"
+                    android:text="访问官网"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical|left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:text="172厘米"
+                    android:layout_weight="1"
+                    android:id="@+id/text06"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical|right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <ImageButton
+                    android:id="@+id/image03"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/running_right"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:background="@color/black"
+                android:layout_width="320dp"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/linear04"
+                android:clickable="true"
+                android:background="@drawable/list_press"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="320dp"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/text07"
+                    android:text="小米商城"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical|left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:text="67.0公斤"
+                    android:layout_weight="1"
+                    android:id="@+id/text08"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical|right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <ImageButton
+                    android:id="@+id/image04"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/running_right"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:background="@color/black"
+                android:layout_width="320dp"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/linear05"
+                android:clickable="true"
+                android:background="@drawable/list_press"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="320dp"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/text09"
+                    android:text="小米商城"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical|left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:text="67.0公斤"
+                    android:layout_weight="1"
+                    android:id="@+id/text10"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical|right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <ImageButton
+                    android:id="@+id/image05"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/running_right"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:background="@color/black"
+                android:layout_width="320dp"
+                android:layout_height="1dp" />
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

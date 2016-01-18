@@ -24,6 +24,8 @@ import android.widget.TimePicker;
  */
 public class EditClock extends Activity {
 
+    public static String time = "周一到周五";
+
     TextView timeText = null;
     int index;
     TimePicker tp = null;
@@ -75,6 +77,12 @@ public class EditClock extends Activity {
         });
 
 
+    }
+
+    @Override
+    protected void onResume() {
+        timeText.setText(time);
+        super.onResume();
     }
 
 
@@ -210,7 +218,6 @@ public class EditClock extends Activity {
 
 
             getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
-
 
             return container;
         }
