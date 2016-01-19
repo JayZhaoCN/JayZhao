@@ -65,13 +65,10 @@ public class Services extends Activity {
                         image01.setImageDrawable(getResources().getDrawable(R.drawable.ic_indicator_prev));
                         break;
                 }
-
-
                 return false;
             }
         });
-
-
+        
         super.onCreate(savedInstanceState);
     }
 }
