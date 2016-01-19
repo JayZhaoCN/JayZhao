@@ -40,7 +40,7 @@
                     android:layout_gravity="center"
                     android:gravity="left"
                     android:layout_weight="1"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     >
                 </TextView>
 
@@ -62,12 +62,12 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="10dp"></LinearLayout>
+                android:layout_height="60dp"></LinearLayout>
 
             <ImageButton
                 android:id="@+id/mi"
-                android:layout_height="180dp"
-                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:layout_width="220dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_about_logo"
                 android:layout_gravity="center_horizontal"
@@ -92,8 +92,9 @@
             android:layout_height="300dp">
 
             <LinearLayout
-                android:id="@+id/linear01"
+                android:descendantFocusability="blocksDescendants"
                 android:clickable="true"
+                android:id="@+id/linear01"
                 android:background="@drawable/list_press"
                 android:layout_gravity="center_horizontal"
                 android:orientation="horizontal"
@@ -111,7 +112,7 @@
                     android:layout_height="match_parent" />
 
                 <TextView
-                    android:text="男"
+                    android:text=""
                     android:layout_weight="1"
                     android:id="@+id/text02"
                     android:textColor="#000000"
@@ -136,6 +137,7 @@
                 android:layout_height="1dp" />
 
             <LinearLayout
+                android:descendantFocusability="blocksDescendants"
                 android:id="@+id/linear02"
                 android:clickable="true"
                 android:background="@drawable/list_press"
@@ -155,7 +157,7 @@
                     android:layout_height="match_parent" />
 
                 <TextView
-                    android:text="1993年7月"
+                    android:text=""
                     android:layout_weight="1"
                     android:id="@+id/text04"
                     android:textColor="#000000"
@@ -180,6 +182,7 @@
                 android:layout_height="1dp" />
 
             <LinearLayout
+                android:descendantFocusability="blocksDescendants"
                 android:id="@+id/linear03"
                 android:clickable="true"
                 android:background="@drawable/list_press"
@@ -191,7 +194,7 @@
                 <TextView
                     android:layout_weight="1"
                     android:id="@+id/text05"
-                    android:text="访问官网"
+                    android:text="检查更新"
                     android:textColor="#000000"
                     android:gravity="center_vertical|left"
                     android:layout_gravity="center_vertical"
@@ -199,7 +202,7 @@
                     android:layout_height="match_parent" />
 
                 <TextView
-                    android:text="172厘米"
+                    android:text=""
                     android:layout_weight="1"
                     android:id="@+id/text06"
                     android:textColor="#000000"
@@ -224,6 +227,7 @@
                 android:layout_height="1dp" />
 
             <LinearLayout
+                android:descendantFocusability="blocksDescendants"
                 android:id="@+id/linear04"
                 android:clickable="true"
                 android:background="@drawable/list_press"
@@ -243,7 +247,7 @@
                     android:layout_height="match_parent" />
 
                 <TextView
-                    android:text="67.0公斤"
+                    android:text=""
                     android:layout_weight="1"
                     android:id="@+id/text08"
                     android:textColor="#000000"
@@ -268,6 +272,7 @@
                 android:layout_height="1dp" />
 
             <LinearLayout
+                android:descendantFocusability="blocksDescendants"
                 android:id="@+id/linear05"
                 android:clickable="true"
                 android:background="@drawable/list_press"
@@ -279,7 +284,7 @@
                 <TextView
                     android:layout_weight="1"
                     android:id="@+id/text09"
-                    android:text="小米商城"
+                    android:text="用户协议及隐私政策"
                     android:textColor="#000000"
                     android:gravity="center_vertical|left"
                     android:layout_gravity="center_vertical"
@@ -287,7 +292,7 @@
                     android:layout_height="match_parent" />
 
                 <TextView
-                    android:text="67.0公斤"
+                    android:text=""
                     android:layout_weight="1"
                     android:id="@+id/text10"
                     android:textColor="#000000"
@@ -312,13 +317,7 @@
                 android:layout_height="1dp" />
 
 
-
-
-
         </LinearLayout>
+
     </LinearLayout>
-
-
-
-
 </LinearLayout>

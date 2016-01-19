@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
@@ -20,9 +22,10 @@ import android.widget.TextView;
 public class PersonalInfo extends Activity {
 
 
-    public static int sportGoal = 8000;
+    public static int sportGoal = 0;
 
     TextView sport;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,8 @@ public class PersonalInfo extends Activity {
         imageButton01.getBackground().setAlpha(0);
         ImageButton imageButton02 = (ImageButton) findViewById(R.id.imagebutton02);
         imageButton02.getBackground().setAlpha(0);
+
+
         ImageButton imageButton03 = (ImageButton) findViewById(R.id.imagebutton03);
         imageButton03.getBackground().setAlpha(0);
         ImageButton imageButton04 = (ImageButton) findViewById(R.id.imagebutton04);
@@ -75,9 +80,12 @@ public class PersonalInfo extends Activity {
         });
 
         LinearLayout linear01 = (LinearLayout) findViewById(R.id.linear01);
+
+
         linear01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("asd", "asd");
                 Intent intent = new Intent();
                 intent.setClass(PersonalInfo.this, Me.class);
                 PersonalInfo.this.startActivity(intent);
@@ -108,6 +116,16 @@ public class PersonalInfo extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(PersonalInfo.this, SportGoal.class);
+                PersonalInfo.this.startActivity(intent);
+            }
+        });
+
+        LinearLayout linear07 = (LinearLayout) findViewById(R.id.linear07);
+        linear07.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(PersonalInfo.this, About.class);
                 PersonalInfo.this.startActivity(intent);
             }
         });

@@ -104,7 +104,9 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:descendantFocusability="beforeDescendants"
         android:clickable="true"
+        android:id="@+id/l2"
         android:background="@drawable/list_press"
         android:orientation="horizontal"
         android:layout_width="320dp"

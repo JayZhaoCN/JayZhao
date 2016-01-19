@@ -60,7 +60,7 @@
         </activity>
         <activity
             android:name=".Lab"
-            android:label="Lab"
+            android:label="Lab"     
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
@@ -73,6 +73,26 @@
             android:label="SportGoal"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+            android:name=".About"
+            android:label="About"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".MiStore"
+            android:label="MiStore"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Suggest"
+            android:label="Suggest"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".QQ"
+            android:label="QQ"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

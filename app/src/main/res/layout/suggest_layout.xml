@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +22,7 @@
                 android:layout_width="match_parent"
                 >
                 <ImageButton
-                    android:id="@+id/imagebutton01"
+                    android:id="@+id/back"
                     android:layout_height="38dp"
                     android:layout_width="38dp"
                     android:scaleType="centerInside"
@@ -32,14 +33,48 @@
                     android:id="@+id/textView1"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="我"
+                    android:text="意见反馈"
                     android:layout_gravity="center"
                     android:gravity="left"
                     android:layout_weight="1"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     >
                 </TextView>
             </LinearLayout>
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"></LinearLayout>
+
+    <EditText
+        android:id="@+id/edit01"
+        android:textSize="12dp"
+        android:hint="你的联系方式（电邮、手机号或QQ）"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="320dp"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:id="@+id/edit02"
+        android:textSize="12dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="感谢你的反馈，我们会聆听你的每一条建议和意见"
+        android:layout_width="320dp"
+        android:layout_height="300dp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"></LinearLayout>
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/button"
+        android:background="@drawable/button"
+        android:text="发送"
+        android:layout_width="320dp"
+        android:layout_height="50dp" />
+
+
+
+
 </LinearLayout>
