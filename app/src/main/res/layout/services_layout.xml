@@ -69,6 +69,7 @@
         android:layout_height="0.5dp"
         android:background="@color/black"/>
     <LinearLayout
+        android:id="@+id/l1"
         android:clickable="true"
         android:background="@drawable/list_press"
         android:orientation="horizontal"
@@ -139,6 +140,7 @@
         android:background="@color/black"/>
 
     <LinearLayout
+        android:id="@+id/l3"
         android:clickable="true"
         android:background="@drawable/list_press"
         android:orientation="horizontal"

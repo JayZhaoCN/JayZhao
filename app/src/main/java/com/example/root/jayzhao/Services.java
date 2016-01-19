@@ -44,6 +44,16 @@ public class Services extends Activity {
         ImageButton image09 = (ImageButton) findViewById(R.id.imagebutton09);
         image09.getBackground().setAlpha(0);
 
+        LinearLayout l1 = (LinearLayout) findViewById(R.id.l1);
+        l1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(Services.this, Weixin.class);
+                Services.this.startActivity(intent);
+            }
+        });
+
         LinearLayout l2 = (LinearLayout) findViewById(R.id.l2);
         l2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +63,16 @@ public class Services extends Activity {
                 Services.this.startActivity(intent);
             }
         });
+        LinearLayout l3 = (LinearLayout) findViewById(R.id.l3);
+        l3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(Services.this, Weibo.class);
+                Services.this.startActivity(intent);
+            }
+        });
+
 
         image01.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -68,7 +88,6 @@ public class Services extends Activity {
                 return false;
             }
         });
-        
         super.onCreate(savedInstanceState);
     }
 }

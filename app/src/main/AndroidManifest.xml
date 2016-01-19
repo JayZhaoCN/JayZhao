@@ -93,6 +93,16 @@
             android:label="QQ"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+        android:name=".Weixin"
+        android:label="Weixin"
+        android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Weibo"
+            android:label="Weibo"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

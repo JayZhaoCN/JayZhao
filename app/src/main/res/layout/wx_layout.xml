@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/myColor"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+            <LinearLayout
+                android:id="@+id/linearlayour01"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                >
+                <ImageButton
+                    android:id="@+id/back"
+                    android:layout_height="38dp"
+                    android:layout_width="38dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_indicator_prev"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="微信接入"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:layout_weight="1"
+                    android:textColor="#ffffff"
+                    >
+                </TextView>
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="4"
+            android:background="@color/myColor"
+            android:layout_width="match_parent"
+            android:layout_height="340dp">
+
+
+            <ImageButton
+                android:id="@+id/imageQQ"
+                android:layout_height="260dp"
+                android:layout_width="200dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/bind_weixin_help_new"
+                android:layout_gravity="center_horizontal"
+                android:gravity="right"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"></LinearLayout>
+
+            <TextView
+                android:text="接入微信与好友们一起PK运动排行"
+                android:textColor="#ffffff"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"></LinearLayout>
+
+
+            <TextView
+                android:text="点击“微信接入”启动微信进入小米手环账号页面，"
+                android:textColor="#999999"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="然后点击“关注”按钮即可完成接入"
+                android:textColor="#999999"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"></LinearLayout>
+            <Button
+                android:textSize="15sp"
+                android:id="@+id/button"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button"
+                android:text="微信接入"
+                android:textColor="#000000"
+                android:layout_width="200dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

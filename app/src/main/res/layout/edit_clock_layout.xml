@@ -104,32 +104,13 @@
         android:layout_gravity="center"
         android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content">
-            <TextView
-                android:gravity="left|center_vertical"
-                android:textColor="@color/blackDrak"
-                android:text="智能唤醒"
-                android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:gravity="left|center_vertical"
-                android:textColor="#666666"
-                android:text="允许闹钟在目标唤醒时间之前30分钟内将我从浅度睡眠中唤醒，让我更轻松的起床"
-                android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-
-        </LinearLayout>
-
-        <Switch
-            android:id="@+id/switch1"
+        <com.example.root.jayzhao.SwitchButton
+            android:id="@+id/wiperSwitch1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content"
+            />
+
+
 
 
 

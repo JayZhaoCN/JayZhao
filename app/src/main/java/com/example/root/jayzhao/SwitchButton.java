@@ -10,6 +10,7 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -69,17 +70,20 @@ public class SwitchButton extends View implements android.view.View.OnClickListe
         mDest = new Rect(0, 0, mSwitchFrame.getWidth(), mSwitchFrame.getHeight());
         mSrc = new Rect();
         mPaint = new Paint();
-        mPaint.setAntiAlias(true);
+        mPaint.setAntiAlias(true);  //设置抗锯齿
         mPaint.setAlpha(255);
-        mPaint.setXfermode(new PorterDuffXfermode(Mode.DST_IN));
+        mPaint.setXfermode(new PorterDuffXfermode(Mode.DST_IN));  //设置两张图片相交时目标图在外
     }
 
     @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {  //设置控件的尺寸
         // TODO Auto-generated method stub
         setMeasuredDimension(mSwitchFrame.getWidth(), mSwitchFrame.getHeight());
     }
 
+
+    //mDeltX移动的偏移量
+    //mSrc截取源图片的大小
     @Override
     protected void onDraw(Canvas canvas) {
         // TODO Auto-generated method stub
@@ -87,7 +91,7 @@ public class SwitchButton extends View implements android.view.View.OnClickListe
         if (mDeltX > 0 || mDeltX == 0 && mSwitchOn) {
             if(mSrc != null) {
                 mSrc.set(mMoveLength - mDeltX, 0, mSwitchBottom.getWidth()
-                        - mDeltX, mSwitchFrame.getHeight());
+                        - mDeltX, mSwitchFrame.getHeight());  //Rect.set(int left, int top, int right, int bottom),四个值都是相对于左上角的坐标值
             }
         } else if(mDeltX < 0 || mDeltX == 0 && !mSwitchOn){
             if(mSrc != null) {
@@ -95,28 +99,29 @@ public class SwitchButton extends View implements android.view.View.OnClickListe
                         mSwitchFrame.getHeight());
             }
         }
-
-
         int count = canvas.saveLayer(new RectF(mDest), null, Canvas.MATRIX_SAVE_FLAG
                 | Canvas.CLIP_SAVE_FLAG | Canvas.HAS_ALPHA_LAYER_SAVE_FLAG
                 | Canvas.FULL_COLOR_LAYER_SAVE_FLAG
                 | Canvas.CLIP_TO_LAYER_SAVE_FLAG);
 
-        canvas.drawBitmap(mSwitchBottom, mSrc, mDest, null);
+        canvas.drawBitmap(mSwitchBottom, mSrc, mDest, null); //mSrc是对Bitmap图片进行裁剪，mDest是Bitmap图片在画布中显示的位置
         canvas.drawBitmap(mSwitchThumb, mSrc, mDest, null);
         canvas.drawBitmap(mSwitchFrame, 0, 0, null);
-        canvas.drawBitmap(mSwitchMask, 0, 0, mPaint);
-        canvas.restoreToCount(count);
+        canvas.drawBitmap(mSwitchMask, 0, 0, mPaint);  //为什么放了这张图片边角就没有了？
+        //canvas.restoreToCount(count);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         // TODO Auto-generated method stub
         switch (event.getAction()) {
+            //mLastX第一次按下的有效区域
             case MotionEvent.ACTION_DOWN:
+                Log.d("down", "down");
                 mLastX = event.getX();
                 break;
             case MotionEvent.ACTION_MOVE:
+                Log.d("move", "move");
                 mCurrentX = event.getX();
                 mDeltX = (int) (mCurrentX - mLastX);
                 // 如果开关开着向左滑动，或者开关关着向右滑动（这时候是不需要处理的）
@@ -131,6 +136,7 @@ public class SwitchButton extends View implements android.view.View.OnClickListe
                 invalidate();
                 return true;
             case MotionEvent.ACTION_UP:
+                Log.d("up", "up");
                 if (Math.abs(mDeltX) > 0 && Math.abs(mDeltX) < mMoveLength / 2) {
                     mDeltX = 0;
                     invalidate();
@@ -168,6 +174,7 @@ public class SwitchButton extends View implements android.view.View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        Log.d("click", "click");
         // TODO Auto-generated method stub
         mDeltX = mSwitchOn ? mMoveLength : -mMoveLength;
         mSwitchOn = !mSwitchOn;
