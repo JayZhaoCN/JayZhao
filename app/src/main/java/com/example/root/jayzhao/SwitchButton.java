@@ -58,7 +58,6 @@ public class SwitchButton extends View implements android.view.View.OnClickListe
                 R.drawable.switch_mask);
         setOnClickListener(this);
         setOnTouchListener(new OnTouchListener() {
-
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 // TODO Auto-generated method stub
@@ -144,9 +143,9 @@ public class SwitchButton extends View implements android.view.View.OnClickListe
                 } else if (Math.abs(mDeltX) > mMoveLength / 2 && Math.abs(mDeltX) <= mMoveLength) {
                     mDeltX = mDeltX > 0 ? mMoveLength : -mMoveLength;
                     mSwitchOn = !mSwitchOn;
-                    if(mListener != null) {
+/*                    if(mListener != null) {
                         mListener.onChange(this, mSwitchOn);
-                    }
+                    }*/
                     invalidate();
                     mDeltX = 0;
                     return true;
