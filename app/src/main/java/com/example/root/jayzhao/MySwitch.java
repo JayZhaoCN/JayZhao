@@ -40,8 +40,7 @@ public class MySwitch extends View implements View.OnClickListener {
     float first = 0;
     boolean switchOn  =true;
     Rect mDest, mSrc;
-    public static Bitmap resizeImage(Bitmap bitmap, int w, int h)
-    {
+    public static Bitmap resizeImage(Bitmap bitmap, int w, int h) {
         Bitmap BitmapOrg = bitmap;
         int width = BitmapOrg.getWidth();
         int height = BitmapOrg.getHeight();
@@ -106,6 +105,27 @@ public class MySwitch extends View implements View.OnClickListener {
                 invalidate();
                 return true;
             case MotionEvent.ACTION_UP:
+                if(move != 0 && Math.abs(move) < maxMove/2) {
+                    move = 0;
+                    invalidate();
+                    return true;
+                }
+                else if(Math.abs(move) >= maxMove/2 && Math.abs(move) < maxMove) {
+                    move = move > 0? maxMove:-maxMove;
+                    if(switchOn) {
+                        switchOn = false;
+                        thumb = thumbDisable;
+                    }
+                    else {
+                        switchOn = true;
+                        thumb = thumbEnable;
+                    }
+                    move = 0;
+                    invalidate();
+                    return true;
+                }
+                return super.onTouchEvent(event);
+            case MotionEvent.ACTION_CANCEL:
                 if(move != 0 && Math.abs(move) < maxMove/2) {
                     move = 0;
                     invalidate();

@@ -116,7 +116,6 @@ public class SmartColok extends Activity {
             ViewGroup vg = (ViewGroup)getLayoutInflater().inflate(R.layout.list04, null);
             TextView t1 = (TextView) vg.findViewById(R.id.text01);
             TextView t2 = (TextView) vg.findViewById(R.id.text02);
-            Switch switches = (Switch) vg.findViewById(R.id.switch1);
             t1.setText(time.get(position));
             t1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -128,7 +127,6 @@ public class SmartColok extends Activity {
                 }
             });
             t2.setText(status.get(position));
-            switches.setChecked(isOpen.get(position));
             return vg;
         }
     }
