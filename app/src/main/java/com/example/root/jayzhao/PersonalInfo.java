@@ -79,13 +79,12 @@ public class PersonalInfo extends Activity {
             }
         });
 
-        LinearLayout linear01 = (LinearLayout) findViewById(R.id.linear01);
+        LinearLayout linear01 = (LinearLayout) findViewById(R.id.linearlayout01);
 
 
         linear01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("asd", "asd");
                 Intent intent = new Intent();
                 intent.setClass(PersonalInfo.this, Me.class);
                 PersonalInfo.this.startActivity(intent);

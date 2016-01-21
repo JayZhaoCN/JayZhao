@@ -75,8 +75,15 @@
     <TextView
         android:layout_gravity="center_horizontal"
         android:textColor="#999999"
-        android:text="根据世界卫生组织的建议，你每天需要进行中等强度的运动40分钟，相当于快走8000步"
-        android:layout_width="240dp"
+        android:text="根据世界卫生组织的建议，你每天需要进行中"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:textColor="#999999"
+        android:text="等强度的运动40分钟，相当于快走8000步"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <LinearLayout

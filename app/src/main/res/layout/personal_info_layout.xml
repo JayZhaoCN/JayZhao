@@ -54,7 +54,7 @@
         />
 
     <LinearLayout
-        android:descendantFocusability="beforeDescendants"
+        android:descendantFocusability="blocksDescendants"
         android:clickable="true"
         android:background="@drawable/list_press"
         android:orientation="horizontal"
@@ -62,8 +62,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearlayout01">
         <ImageButton
-            android:clickable="true"
-            android:duplicateParentState="true"
+            android:clickable="false"
             android:layout_weight="2"
             android:id="@+id/imagebutton02"
             android:layout_height="70dp"
@@ -75,8 +74,8 @@
             />
 
         <LinearLayout
+            android:clickable="false"
             android:id="@+id/linear01"
-            android:clickable="true"
             android:layout_weight="2"
             android:layout_gravity="center"
             android:orientation="vertical"
@@ -101,6 +100,7 @@
 
 
         <ImageButton
+            android:clickable="false"
             android:layout_weight="1"
             android:id="@+id/imagebutton03"
             android:layout_height="30dp"
