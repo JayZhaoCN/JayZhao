@@ -1,12 +1,13 @@
 package com.example.root.jayzhao;
 
-import android.app.ActionBar;
 import android.app.DialogFragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -32,7 +33,13 @@ public class MyDialogFragment extends DialogFragment {
     public void onStart() {
         super.onStart();
 
+        DisplayMetrics dm = new DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics( dm );
+        getDialog().getWindow().setLayout( dm.widthPixels, getDialog().getWindow().getAttributes().height );
+
+
         final WindowManager.LayoutParams layoutParams = getDialog().getWindow().getAttributes();
+        getDialog().getWindow().setWindowAnimations(R.style.dialogWindowAnim);
         layoutParams.gravity = Gravity.TOP;
         layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
         getDialog().getWindow().setAttributes(layoutParams);
@@ -44,8 +51,7 @@ public class MyDialogFragment extends DialogFragment {
         MyAdapter1(LayoutInflater lf) {
             this.lf = lf;
         }
-
-
+        
         @Override
         public int getCount() {
             return MainActivity.str02.size();
@@ -114,7 +120,7 @@ public class MyDialogFragment extends DialogFragment {
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        container = (ViewGroup)inflater.inflate(R.layout.dialog_layout, null);
+        container = (ViewGroup) inflater.inflate(R.layout.dialog_layout, null);
         ListView list = (ListView)container.findViewById(R.id.listView01);
         list.setAdapter(new MyAdapter1(inflater));
         getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
