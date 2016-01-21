@@ -53,7 +53,6 @@ public class Suggest extends Activity {
                     params.height = heightx;
                     suggest.setLayoutParams(params);
                 }
-
             }
         });
 
