@@ -9,21 +9,11 @@
                 android:bottomLeftRadius="10dip"
                 android:bottomRightRadius="10dip" />
             <stroke
-                android:width="0.2dp"
-                android:color="#222222"
-                android:dashWidth="1dp"
+                android:width="1px"
+                android:color="#cccccc"
+                android:dashWidth="1px"
                 android:dashGap="0dp" />
-
         </shape>
     </item>
-    <item android:top="1px" android:bottom="1px" android:left="1px" android:right="1px">
-        <shape>
 
-            <corners
-                android:topLeftRadius="10dip"
-                android:topRightRadius="10dip"
-                android:bottomLeftRadius="10dip"
-                android:bottomRightRadius="10dip" />
-        </shape>
-    </item>
 </layer-list>

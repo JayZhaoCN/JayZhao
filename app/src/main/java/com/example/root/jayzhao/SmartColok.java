@@ -2,6 +2,8 @@ package com.example.root.jayzhao;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -10,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -26,16 +27,12 @@ public class SmartColok extends Activity {
 
     ImageButton image01;
 
-
     MyAdapter myAdapter = new MyAdapter();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.smart_colok);
-
-
 
         image01 = (ImageButton) findViewById(R.id.imagebutton01);
         image01.getBackground().setAlpha(0);
@@ -116,6 +113,11 @@ public class SmartColok extends Activity {
             ViewGroup vg = (ViewGroup)getLayoutInflater().inflate(R.layout.list04, null);
             TextView t1 = (TextView) vg.findViewById(R.id.text01);
             TextView t2 = (TextView) vg.findViewById(R.id.text02);
+
+            AssetManager mgr=getAssets();//得到AssetManager
+            Typeface tf= Typeface.createFromAsset(mgr, "fonts/MIUI-Light.ttf");//根据路径得到Typeface
+            t1.setTypeface(tf);//设置字体
+
             t1.setText(time.get(position));
             t1.setOnClickListener(new View.OnClickListener() {
                 @Override
