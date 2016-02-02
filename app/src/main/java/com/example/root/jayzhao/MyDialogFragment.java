@@ -37,10 +37,10 @@ public class MyDialogFragment extends DialogFragment {
         getActivity().getWindowManager().getDefaultDisplay().getMetrics( dm );
         getDialog().getWindow().setLayout( dm.widthPixels, getDialog().getWindow().getAttributes().height );
 
-
         final WindowManager.LayoutParams layoutParams = getDialog().getWindow().getAttributes();
         getDialog().getWindow().setWindowAnimations(R.style.dialogWindowAnim);
         layoutParams.gravity = Gravity.TOP;
+        getDialog().getWindow().getDecorView().setPadding(0, 0, 0, 0);
         layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
         getDialog().getWindow().setAttributes(layoutParams);
     }
