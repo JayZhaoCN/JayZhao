@@ -1,7 +1,6 @@
 package com.example.root.jayzhao;
 
 import android.app.FragmentTransaction;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -18,19 +17,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -90,11 +84,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(-1);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
+        setContentView(R.layout.activity_main);
 
         Toast.makeText(MainActivity.this, "Hello from Windows!!!", Toast.LENGTH_SHORT).show();
 
@@ -113,8 +114,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 df = new MyDialogFragment(MainActivity.this);
                 df.setCancelable(true);
-
-
 
                 df.show(getFragmentManager(), "");
             }

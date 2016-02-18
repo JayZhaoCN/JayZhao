@@ -20,6 +20,8 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import javax.security.auth.login.LoginException;
+
 
 public class MyDialogFragment extends DialogFragment {
     Context c = null;
@@ -33,9 +35,7 @@ public class MyDialogFragment extends DialogFragment {
     public void onStart() {
         super.onStart();
 
-        DisplayMetrics dm = new DisplayMetrics();
-        getActivity().getWindowManager().getDefaultDisplay().getMetrics( dm );
-        getDialog().getWindow().setLayout( dm.widthPixels, getDialog().getWindow().getAttributes().height );
+
 
         final WindowManager.LayoutParams layoutParams = getDialog().getWindow().getAttributes();
         getDialog().getWindow().setWindowAnimations(R.style.dialogWindowAnim);
@@ -79,7 +79,7 @@ public class MyDialogFragment extends DialogFragment {
                 Intent intent = new Intent();
 
                 public void onClick(View v) {
-                    switch (index) {
+                    switch (index) {    
                         case 0:
                             intent.setClass(c, MyDevice.class);
                             intent.putExtra("index", index);
@@ -105,7 +105,6 @@ public class MyDialogFragment extends DialogFragment {
                             intent.putExtra("index", index);
                             c.startActivity(intent);
                             break;
-
                     }
                 }
             });
@@ -113,9 +112,6 @@ public class MyDialogFragment extends DialogFragment {
             return parent;
         }
     }
-
-
-
 
     @Nullable
     @Override
@@ -148,8 +144,6 @@ public class MyDialogFragment extends DialogFragment {
                         image.setImageDrawable(getResources().getDrawable(R.drawable.menu_cancel_normal));
                         break;
                 }
-
-
                 return false;
             }
         });

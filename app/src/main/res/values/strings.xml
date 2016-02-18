@@ -4,4 +4,8 @@
     <string name="action_edit">edit</string>
     <string name="action_share">share</string>
     <string name="title">今日活动</string>
+    <string name="prompt_email">用户名</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">登录或注册</string>
+    <string name="action_sign_in_short">Sign in</string>
 </resources>
