@@ -21,7 +21,7 @@ import android.widget.Toast;
  */
 public class Login extends Activity {
 
-    public ProgressBar progressBar;
+    ProgressBar progressBar;
 
     MyService myService = null;
 
@@ -39,7 +39,6 @@ public class Login extends Activity {
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-
         }
     };
 
@@ -53,6 +52,7 @@ public class Login extends Activity {
             }
             else {
                 Toast.makeText(Login.this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
             }
         }
     }
@@ -70,8 +70,6 @@ public class Login extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.login_layout);
-
-
 
         receiver = new MyReceiver();
         IntentFilter filter = new IntentFilter();
@@ -95,10 +93,9 @@ public class Login extends Activity {
             loginButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    progressBar.setVisibility(View.VISIBLE);
                     String usernameStr = username.getText().toString();
                     String passwordStr = password.getText().toString();
-
 
                     myService.login(usernameStr, passwordStr, Login.this);
                 }

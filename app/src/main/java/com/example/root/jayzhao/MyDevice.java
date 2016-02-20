@@ -124,20 +124,6 @@ public class MyDevice extends Activity {
         ListView listView = (ListView) findViewById(R.id.list01);
         listView.setAdapter(new MyAdapter());
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
 
 }

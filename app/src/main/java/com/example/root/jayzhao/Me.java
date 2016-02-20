@@ -30,7 +30,6 @@ public class Me extends Activity {
     TextView brith = null;
     TextView height = null;
 
-
     LinearLayout linear01;
     LinearLayout linear02;
     LinearLayout linear03;

@@ -6,8 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.DisplayMetrics;
-import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -22,10 +20,12 @@ import android.widget.TextView;
 
 import javax.security.auth.login.LoginException;
 
-
 public class MyDialogFragment extends DialogFragment {
     Context c = null;
+
+
     MyDialogFragment(Context c) {
+        super();
         this.c = c;
     }
 
@@ -124,7 +124,6 @@ public class MyDialogFragment extends DialogFragment {
 
         image.getBackground().setAlpha(0);
 
-
         image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -147,11 +146,6 @@ public class MyDialogFragment extends DialogFragment {
                 return false;
             }
         });
-
-
-
-
-
 
         return container;
     }

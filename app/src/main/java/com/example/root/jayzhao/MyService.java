@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 import java.io.DataInputStream;
@@ -44,30 +45,25 @@ public class MyService extends Service {
             @Override
             public void run() {
                 try {
-                    Socket client = new Socket("192.168.123.1", 8888);
+                    Socket client = new Socket("172.16.0.1", 8888);
                     dos = new DataOutputStream(client.getOutputStream());
                     dis = new DataInputStream(client.getInputStream());
 
                     dos.writeUTF(name1);
                     dos.writeUTF(password1);
 
-                    //login.progressBar.setVisibility(View.VISIBLE);
-
-
                     if(dis.readUTF().equals("accept")) {
                         success = true;
                         handler.sendEmptyMessage(1);
                         login.jump();
-
-
                     }
                     else {
                         success = false;
                         handler.sendEmptyMessage(0);
                     }
-                    //login.progressBar.setVisibility(View.GONE);
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    //e.printStackTrace();
+                    Log.e("MyService:", "Connection Fail");
                 }
             }
         }).start();
